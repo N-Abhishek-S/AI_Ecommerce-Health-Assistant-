@@ -6,7 +6,7 @@ import { products as productsData } from '../data/products'; // Import the entir
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
-const Homepage = () => {
+const Index = () => {
   const heroRef = useRef(null);
   const taglineRef = useRef(null);
   const ctaRef = useRef(null);
@@ -246,4 +246,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default Index;

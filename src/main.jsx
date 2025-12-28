@@ -14,7 +14,7 @@ import SingInForm from "./pages/SignInForm.jsx";            // Make sure file na
 import ShoP_MainFun from "./pages/ShoP_MainFun.jsx";
 import Ai_Assist from "./pages/AIAssistPage.jsx";
 import EcommercePage from "./pages/EcommercePage.jsx";
-import Homepage from "./pages/Homepage.jsx";
+import Index from "./pages/Index.jsx";
 import HealthVoiceAssistant from "./pages/HealthVoiceAssistant.jsx";
 import CustomerCareVoiceAssistant from "./pages/CustomerCareVoiceAssistant.jsx";
 
@@ -25,6 +25,7 @@ function Main() {
     <StrictMode>
       <CartProvider>
         <BrowserRouter
+          basename={import.meta.env.BASE_URL}
           future={{
             v7_startTransition: true,
             v7_relativeSplatPath: true,
@@ -34,7 +35,7 @@ function Main() {
             {/* Parent layout route */}
             <Route path="/" element={<App />}>
               {/* Default (index) route */}
-              <Route index element={<Homepage />} />
+              <Route index element={<Index />} />
 
               {/* Old routes */}
               <Route path="checkout" element={<Checkout />} />
