@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   const navItems = [
-    { to: "/ecommerce", label: "🛍️ Shop", color: "blue" },
+    { to: "/shop", label: "🛍️ Shop", color: "blue" },
     { to: "/aiassist", label: "🤖 AI Stylist", color: "purple" },
     { to: "/sales-assistant", label: "💬 AI Sales Agent", color: "blue" },
     { to: "/healthvoiceassistant", label: "🏥 Health Analyst", color: "purple" },
