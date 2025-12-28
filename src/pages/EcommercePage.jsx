@@ -244,12 +244,6 @@ const ShoP_MainFun = () => {
     return filterOptions[selectedCategory] || {};
   };
 
-  // Debug function to log product data
-  const debugProducts = () => {
-    console.log('Raw products:', rawProducts);
-    console.log('Sample products (first 3):', sampleProducts.slice(0, 3));
-    console.log('Filtered products (first 3):', filteredProducts.slice(0, 3));
-  };
 
   if (loading) {
     return (
@@ -267,15 +261,6 @@ const ShoP_MainFun = () => {
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">Product Finder</h1>
         
-        {/* Debug button - remove in production */}
-        <div className="mb-4 text-center">
-          <button 
-            onClick={debugProducts}
-            className="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg text-sm"
-          >
-            Debug Products
-          </button>
-        </div>
         
         {/* Category selector */}
         <div className="mb-8 overflow-x-auto">
