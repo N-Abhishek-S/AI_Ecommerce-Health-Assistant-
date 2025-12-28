@@ -1,8 +1,28 @@
 import React, { useState } from 'react';
+import PriceComparisonModal from './PriceComparisonModal';
+import { fetchPriceComparison } from '../services/priceComparisonService';
 
 const ProductCard = ({ product, index }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+
+  // Price Comparison State
+  const [isComparisonOpen, setIsComparisonOpen] = useState(false);
+  const [comparisonData, setComparisonData] = useState([]);
+  const [comparisonLoading, setComparisonLoading] = useState(false);
+
+  const handleCompareClick = async () => {
+    setIsComparisonOpen(true);
+    setComparisonLoading(true);
+    try {
+      const data = await fetchPriceComparison(product);
+      setComparisonData(data);
+    } catch (error) {
+      console.error("Failed to fetch comparisons", error);
+    } finally {
+      setComparisonLoading(false);
+    }
+  };
 
   if (!product) return null;
 
@@ -87,10 +107,27 @@ const ProductCard = ({ product, index }) => {
           </div>
         </div>
         
-        <button className="w-full mt-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-200 font-medium">
-          Add to Cart
-        </button>
+        <div className="flex gap-2 mt-3">
+          <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-200 font-medium text-sm">
+            Add to Cart
+          </button>
+          <button
+            onClick={handleCompareClick}
+            className="px-3 py-2 bg-white border border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 font-medium text-sm flex items-center justify-center"
+            title="Compare Prices"
+          >
+            🔍
+          </button>
+        </div>
       </div>
+
+      <PriceComparisonModal
+        isOpen={isComparisonOpen}
+        onClose={() => setIsComparisonOpen(false)}
+        product={product}
+        comparisons={comparisonData}
+        loading={comparisonLoading}
+      />
     </div>
   );
 };
