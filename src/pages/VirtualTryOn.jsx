@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Draggable from 'react-draggable';
 import { products } from '../data/products.js';
 
@@ -9,9 +10,16 @@ const VirtualTryOn = () => {
   const [rotation, setRotation] = useState(0);
   const [loading, setLoading] = useState(false);
   const containerRef = useRef(null);
+  const location = useLocation();
 
   // Filter for try-on compatible products (e.g., Sunglasses)
   const tryOnProducts = products.unisex?.sunglasses || [];
+
+  useEffect(() => {
+    if (location.state?.product) {
+      setSelectedProduct(location.state.product);
+    }
+  }, [location.state]);
 
   // Fallback transparent image for sunglasses if the product image is not ideal
   // Using a sample transparent PNG for demo purposes if the real image is a model photo

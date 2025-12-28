@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PriceComparisonModal from './PriceComparisonModal';
 import { fetchPriceComparison } from '../services/priceComparisonService';
 
 const ProductCard = ({ product, index }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoading, setImageLoading] = useState(true);
+  const navigate = useNavigate();
 
   // Price Comparison State
   const [isComparisonOpen, setIsComparisonOpen] = useState(false);
@@ -55,6 +57,12 @@ const ProductCard = ({ product, index }) => {
   const handleImageLoad = () => {
     setImageLoading(false);
   };
+
+  const handleTryOnClick = () => {
+    navigate('/mainfun', { state: { product } });
+  };
+
+  const isTryOnAvailable = product.category?.toLowerCase() === 'sunglasses' || product.productType?.toLowerCase() === 'sunglasses';
 
   return (
     <div className="product-card bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200 overflow-hidden">
@@ -111,6 +119,17 @@ const ProductCard = ({ product, index }) => {
           <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-200 font-medium text-sm">
             Add to Cart
           </button>
+
+          {isTryOnAvailable && (
+            <button
+              onClick={handleTryOnClick}
+              className="px-3 py-2 bg-green-50 border border-green-200 text-green-600 rounded-lg hover:bg-green-100 transition-all duration-200 font-medium text-sm flex items-center justify-center"
+              title="Virtual Try-On"
+            >
+              🕶️
+            </button>
+          )}
+
           <button
             onClick={handleCompareClick}
             className="px-3 py-2 bg-white border border-blue-200 text-blue-600 rounded-lg hover:bg-blue-50 transition-all duration-200 font-medium text-sm flex items-center justify-center"
