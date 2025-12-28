@@ -17,6 +17,7 @@ import EcommercePage from "./pages/EcommercePage.jsx";
 import Homepage from "./pages/Homepage.jsx";
 import HealthVoiceAssistant from "./pages/HealthVoiceAssistant.jsx";
 import CustomerCareVoiceAssistant from "./pages/CustomerCareVoiceAssistant.jsx";
+import SalesAssistant from "./pages/SalesAssistant.jsx";
 
 import { CartProvider } from "./context/CartContext.jsx";
 
@@ -52,6 +53,7 @@ function Main() {
                 path="customervoiceassistant"
                 element={<CustomerCareVoiceAssistant />}
               />
+              <Route path="sales-assistant" element={<SalesAssistant />} />
               <Route path="mainfun" element={<ShoP_MainFun />} />
               <Route path="aiassist" element={<Ai_Assist />} />
               <Route path="ecommerce" element={<EcommercePage />} />
