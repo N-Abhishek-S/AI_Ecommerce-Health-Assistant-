@@ -14,13 +14,15 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const navItems = [
-    { to: "/ecommerce", label: "🛍️ Shop", color: "blue" },
-    { to: "/aiassist", label: "🤖 AI Stylist", color: "purple" },
-    { to: "/healthvoiceassistant", label: "🏥 Health Analyst", color: "purple" },
-    { to: "/customervoiceassistant", label: "🎤 customer-care", color: "purple" },
-    { to: "/mainfun", label: "👗 Virtual Try-On", color: "green" },
-  ];
+const navItems = [
+  { to: "/ecommerce", label: "🛍️ Shop", color: "blue" },
+  { to: "/aiassist", label: "🤖 AI Stylist", color: "purple" },
+  { to: "/healthvoiceassistant", label: "🏥 Health Analyst", color: "purple" },
+  { to: "/customervoiceassistant", label: "🎤 Customer Care", color: "purple" },
+  { to: "/priceComparison", label: "💰 Price Comparison", color: "orange" },
+  { to: "/mainfun", label: "👗 Virtual Try-On", color: "green" },
+];
+
 
   const getNavLinkClass = (isActive, color) => {
     const baseClasses = "px-4 py-2.5 rounded-lg font-medium transition-all duration-200";
@@ -43,7 +45,7 @@ const Header = () => {
         {/* Logo and Mobile Menu */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
+            <div className="w-10 h-10 bg-linear-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md">
               <span className="text-white font-bold text-xl">AI</span>
             </div>
             <span className="text-xl font-bold text-gray-900">StyleGenius</span>
@@ -119,7 +121,7 @@ const Header = () => {
             </NavLink>
             
             <NavLink to="/get-started">
-              <button className="px-4 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm shadow-sm">
+              <button className="px-4 py-2.5 bg-linear-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm shadow-sm">
                 Get Started
               </button>
             </NavLink>
@@ -149,7 +151,7 @@ const Header = () => {
                 </button>
               </NavLink>
               <NavLink to="/get-started">
-                <button className="w-full px-4 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm">
+                <button className="w-full px-4 py-2.5 bg-linear-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 text-sm">
                   Get Started
                 </button>
               </NavLink>

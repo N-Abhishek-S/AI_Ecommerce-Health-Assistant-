@@ -105,7 +105,7 @@ export default function Home() {
     <div className="space-y-10">
       <section
         ref={heroRef}
-        className="rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-fuchsia-500/15 via-orange-400/10 to-cyan-400/15 border border-[hsl(var(--border))]"
+        className="rounded-3xl p-8 sm:p-12 bg-linear-to-br from-fuchsia-500/15 via-orange-400/10 to-cyan-400/15 border border-[hsl(var(--border))]"
       >
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
@@ -157,7 +157,7 @@ export default function Home() {
               onChange={(e) => onFile(e.target.files?.[0])}
             />
             <div className="grid sm:grid-cols-[160px_1fr] gap-4 items-center">
-              <div className="aspect-square w-full max-w-[160px] rounded-2xl bg-neutral-200/60 dark:bg-neutral-700/60 grid place-items-center overflow-hidden">
+              <div className="aspect-square w-full max-w-40 rounded-2xl bg-neutral-200/60 dark:bg-neutral-700/60 grid place-items-center overflow-hidden">
                 {preview ? (
                   <img
                     src={preview}

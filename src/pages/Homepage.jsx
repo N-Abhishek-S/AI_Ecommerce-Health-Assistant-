@@ -146,7 +146,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-linear-to-b from-gray-50 to-gray-100">
    
       <section ref={heroRef} className="relative py-20 md:py-28 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -214,7 +214,7 @@ const Homepage = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+      <section className="py-20 bg-linear-to-b from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-4">Why Choose Our AI Assistant?</h2>
           <p className="text-xl text-gray-600 text-center max-w-3xl mx-auto mb-16">
@@ -228,7 +228,7 @@ const Homepage = () => {
                 ref={el => featureRefs.current[index] = el}
                 className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
               >
-                <div className="flex-shrink-0 w-full md:w-1/3 flex justify-center">
+                <div className="shrink-0 w-full md:w-1/3 flex justify-center">
                   <div className="bg-indigo-50 p-6 rounded-2xl shadow-inner">
                     {feature.icon}
                   </div>
