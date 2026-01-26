@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 
-// Extended filter options by category
 const filterOptions = {
   Sunglasses: {
     faceShape: ["Round Face", "Oval Face", "Square Face", "Heart Face", "Diamond Face"],
@@ -244,7 +243,7 @@ const ShoP_MainFun = () => {
     });
     
     setFilteredProducts(result);
-    
+  
     // Set animation ready for next render
     setAnimationReady(false);
     setTimeout(() => setAnimationReady(true), 10);

@@ -257,7 +257,7 @@ const CustomerCareVoiceAssistant = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={redirectToLocalhost}
-              className="px-6 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold rounded-xl hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg"
+              className="px-6 py-4 bg-linear-to-r from-yellow-500 to-orange-500 text-white font-bold rounded-xl hover:from-yellow-600 hover:to-orange-600 transition-all duration-300 shadow-lg"
             >
               🔄 Switch to Localhost
             </button>
@@ -295,7 +295,7 @@ const CustomerCareVoiceAssistant = () => {
         </p>
         <button 
           onClick={handleAllowMicrophone}
-          className="px-8 py-4 bg-gradient-to-r from-blue-500 to-teal-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-teal-600 transition-all duration-300 shadow-lg transform hover:scale-105"
+          className="px-8 py-4 bg-linear-to-r from-blue-500 to-teal-500 text-white font-bold rounded-xl hover:from-blue-600 hover:to-teal-600 transition-all duration-300 shadow-lg transform hover:scale-105"
         >
           🎤 Start Voice Chat
         </button>
@@ -304,7 +304,7 @@ const CustomerCareVoiceAssistant = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-100">
+    <div className="min-h-screen bg-linear-to-br from-purple-50 via-pink-50 to-orange-100">
       {/* Header */}
       <header 
         ref={headerRef}
@@ -313,10 +313,10 @@ const CustomerCareVoiceAssistant = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-linear-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
                 <span className="text-white text-2xl">💬</span>
               </div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <h1 className="text-2xl font-bold bg-linear-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 AI Customer Care
               </h1>
             </div>
@@ -331,13 +331,13 @@ const CustomerCareVoiceAssistant = () => {
             <div className="flex space-x-4">
               <button 
                 onClick={handleGetStarted}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-purple-600 hover:to-pink-600"
+                className="px-6 py-3 bg-linear-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-purple-600 hover:to-pink-600"
               >
                 Start Chat
               </button>
               <button 
                 onClick={handleLiveAgent}
-                className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-600 hover:to-cyan-600"
+                className="px-6 py-3 bg-linear-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 hover:from-blue-600 hover:to-cyan-600"
               >
                 👥 Live Agent
               </button>
@@ -352,10 +352,10 @@ const CustomerCareVoiceAssistant = () => {
         <section className="text-center mb-16">
           <h1 
             ref={titleRef}
-            className="text-6xl md:text-7xl font-black mb-6 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent leading-tight"
+            className="text-6xl md:text-7xl font-black mb-6 bg-linear-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent leading-tight"
           >
             AI-Powered Customer
-            <span className="block bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            <span className="block bg-linear-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
               Care Voice Assistant
             </span>
           </h1>
@@ -383,7 +383,7 @@ const CustomerCareVoiceAssistant = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <button 
               onClick={handleGetStarted}
-              className="px-10 py-5 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 hover:from-purple-600 hover:to-pink-600 group"
+              className="px-10 py-5 bg-linear-to-r from-purple-500 to-pink-500 text-white text-xl font-bold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 hover:from-purple-600 hover:to-pink-600 group"
             >
               <span className="flex items-center justify-center">
                 🎤 Start Voice Chat
@@ -431,10 +431,10 @@ const CustomerCareVoiceAssistant = () => {
         <section className="max-w-4xl mx-auto">
           <div 
             ref={widgetCardRef}
-            className="bg-gradient-to-br from-white to-purple-50 rounded-3xl shadow-2xl border-2 border-purple-200 p-8 hover:shadow-3xl transition-all duration-500 relative overflow-hidden"
+            className="bg-linear-to-br from-white to-purple-50 rounded-3xl shadow-2xl border-2 border-purple-200 p-8 hover:shadow-3xl transition-all duration-500 relative overflow-hidden"
           >
             {/* Glowing effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            <div className="absolute -inset-1 bg-linear-to-r from-purple-400 to-pink-400 rounded-3xl blur opacity-20 group-hover:opacity-30 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
             
             <div className="relative z-10">
               <div className="text-center mb-8">
@@ -497,7 +497,7 @@ const CustomerCareVoiceAssistant = () => {
 
         {/* Support Channels Section */}
         <section className="max-w-4xl mx-auto mt-16">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl p-8 text-white shadow-2xl">
+          <div className="bg-linear-to-r from-purple-500 to-pink-500 rounded-3xl p-8 text-white shadow-2xl">
             <h2 className="text-3xl font-bold mb-6 text-center">
               🚀 Multiple Support Channels
             </h2>
@@ -539,19 +539,19 @@ const CustomerCareVoiceAssistant = () => {
       {/* Footer */}
       <footer 
         ref={footerRef}
-        className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-16"
+        className="bg-linear-to-r from-gray-800 to-gray-900 text-white py-8 mt-16"
       >
         <div className="container mx-auto px-4 text-center">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
+              <div className="w-10 h-10 bg-linear-to-r from-purple-400 to-pink-400 rounded-xl flex items-center justify-center">
                 <span className="text-white">💬</span>
               </div>
               <span className="text-xl font-bold">AI Customer Care</span>
             </div>
             
             <div className="text-lg">
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
+              <span className="bg-linear-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold">
                 Powered by ElevenLabs
               </span>
             </div>

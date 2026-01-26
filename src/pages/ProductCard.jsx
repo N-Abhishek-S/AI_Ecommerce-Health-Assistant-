@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import PriceComparisonModal from './PriceComparisonModal';
 import { fetchPriceComparison } from '../services/priceComparisonService';
 
 const ProductCard = ({ product, index }) => {
@@ -116,7 +115,7 @@ const ProductCard = ({ product, index }) => {
         </div>
         
         <div className="flex gap-2 mt-3">
-          <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-200 font-medium text-sm">
+          <button className="flex-1 bg-linear-to-r from-purple-500 to-blue-600 text-white py-2 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-200 font-medium text-sm">
             Add to Cart
           </button>
           
@@ -140,13 +139,7 @@ const ProductCard = ({ product, index }) => {
         </div>
       </div>
 
-      <PriceComparisonModal 
-        isOpen={isComparisonOpen}
-        onClose={() => setIsComparisonOpen(false)}
-        product={product}
-        comparisons={comparisonData}
-        loading={comparisonLoading}
-      />
+     
     </div>
   );
 };

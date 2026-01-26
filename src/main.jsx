@@ -63,7 +63,7 @@ function Main() {
               <Route path="aiassist" element={<Ai_Assist />} />
               <Route path="ecommerce" element={<EcommercePage />} />
               <Route path="homepage" element={<Homepage />} />
-<Route path="parent" element={<ParentComponent />} />
+              <Route path="parent" element={<ParentComponent />} />
 
               {/* Catch-all 404 → Home (or Homepage, your choice) */}
               <Route path="*" element={<Homepage />} />
@@ -71,7 +71,7 @@ function Main() {
           </Routes>
         </BrowserRouter>
       </CartProvider>
-    </StrictMode>
+    </StrictMode> 
   );
 }
 
